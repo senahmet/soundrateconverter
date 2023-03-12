@@ -10,6 +10,8 @@ def get_bit_per_sample_rates(file_name, input_directory) -> None:
 def convert_to(file_name, bits_per_sample, input_directory, output_directory) -> None:
     file, sample_rate, bps = wavfile.read(input_directory + "/" + file_name, fmt="float")
 
+    print("Converting " + file_name)
+
     wavfile.write(output_directory + "/" + file_name[:-4] + ".wav",
                   file,
                   bits_per_sample=bits_per_sample,
