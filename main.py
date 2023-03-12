@@ -26,6 +26,9 @@ def convert() -> None:
     if not os.path.exists(output_folder):
         os.makedirs(output_folder)
 
+    if not os.path.exists(input_folder):
+        os.makedirs(input_folder)
+
     for file in all_wav_files:
         file_name = file[len(input_folder + '/'):]
 
